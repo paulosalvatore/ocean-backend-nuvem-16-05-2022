@@ -1,4 +1,9 @@
-require("dotenv").config();
+const dotenv = require('dotenv');
+const dotenvExpand = require('dotenv-expand');
+
+const myEnv = dotenv.config();
+dotenvExpand.expand(myEnv);
+
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
